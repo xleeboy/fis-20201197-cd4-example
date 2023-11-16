@@ -1,16 +1,11 @@
-FROM python:3
+# Use the official Nginx base image
+FROM nginx:latest
 
-# set a directory for the app
-WORKDIR /app
+# Copy custom configuration file to the container
+COPY nginx.conf /etc/nginx/nginx.conf
 
-# copy all the files to the container
-COPY . .
-
-RUN apt-get update 
-RUN pip install --no-cache-dir -r requirements.txt
-
-# port number
+# Expose port 80
 EXPOSE 80
 
-# run command
-CMD ["python", "source/app.py"]
+# Start Nginx when the container runs
+CMD ["nginx", "-g", "daemon off;"]
