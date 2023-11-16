@@ -1,23 +1,49 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Welcome to nginx!</title>
-<style>
-html { color-scheme: light dark; }
-body { width: 35em; margin: 0 auto;
-font-family: Tahoma, Verdana, Arial, sans-serif; }
-</style>
+    <title>ver1</title>
+    <style>
+        #top_bar{
+            width:auto; height: 40px;
+            line-height: 40px;
+            text-align:center; word-spacing:45px;
+            background: #85858532;}
+        img{width:auto;}
+        .all{margin: 0 auto;width:900px;} 
+        body{background-image: url('버전1.png'); background-position: 1250px 500px ; background-size: 20%; background-repeat:no-repeat; }
+        #grayline{width:780px; color:gray; margin-top:5px; height: 1px; }
+        .box{width:720px; margin:20px; padding:10px;
+            background-color:#eaf4fc; border:1px solid #bcc7d3;
+            }
+        #alert{font-size:20px; margin:10px;}
+        #list>li{margin:5px;}
+    </style>
 </head>
 <body>
-<h1>xleeboy 57 Welcome to nginx!</h1>
-<p>If you see this page, the nginx web server is successfully installed and
-working. Further configuration is required.</p>
-
-<p>For online documentation and support please refer to
-<a href="http://nginx.org/">nginx.org</a>.<br/>
-Commercial support is available at
-<a href="http://nginx.com/">nginx.com</a>.</p>
-
-<p><em>Thank you for using nginx.</em></p>
+    <div id="top_bar">우리에프아이에스 ㅣ Company ㅣ Business ㅣ Work&Life ㅣ Recruit ㅣ Costomer_Square</div>
+    <img src="main2.png">
+    <div class="all">
+        <h1>Recruit > 채용 절차</h1>
+        <div id="grayline"></div>
+        <h2>1. 신입사원</h2>
+        <div class="box">
+            <p>&nbsp;&nbsp;채용공고 > 서류전형 > 인적성/IT역량평가 > 1차 면접 > 2차 면접> 최종합격 > 신입사원 연수</p>
+        </div>
+    </div>
+    <div id="container"></div>
+        <div class="all" >
+            <h2>2. 경력사원</h2>
+            <div class="box">
+                <p>>&nbsp;&nbsp;채용공고 > 서류전형 > 인적성/IT역량평가 > 1차 면접 > 2차 면접> > 연봉협상 > 최종합격 </p>
+            </div>
+            <br>
+            <p id="alert">모집부문에 따라 전공, 경력 등의 지원자격은 다르며, <b>공통자격 요건</b>은 아래와 같습니다.</p>
+            <ul id="list">
+                <li>병역필 또는 면제자로 당사 인사관리 규정상 결격 사유가 없는 분</li>
+                <li>경력지원자의 경우 채용공고상 분야별 필요 자격 및 경력을 충족하는 분</li>
+                <li>수시지원자의 경우 지원분야에 실무경력 3년 이상인 분</li>
+            </ul>
+        </div>
+    </div>
 </body>
 </html>
