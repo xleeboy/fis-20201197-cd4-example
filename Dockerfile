@@ -8,7 +8,7 @@ COPY /source/nginx.conf /etc/nginx/nginx.conf
 COPY /source/index.html /usr/share/nginx/html/index.html
 COPY /source/*.html /usr/share/nginx/html/
 COPY /source/*.png /usr/share/nginx/html/
-COPY /source/*.jpg /usr/share/nginx/html/
+# COPY /source/*.jpg /usr/share/nginx/html/
 
 # Expose port 80
 EXPOSE 80
