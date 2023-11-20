@@ -4,7 +4,7 @@ pipeline {
     environment {
         DOCKER_IMAGE = "ip-10-101-3-226.ap-northeast-2.compute.internal/fis-20201197-cd4-project/nginx"
         GITHUB_REPO_URL = "https://github.com/xleeboy/fis-20201197-cd4-project-apps.git"
-        GITHUB_CREDENTIALS_ID = 'your-github-credentials-id'
+        GITHUB_CREDENTIALS_ID = 'github-reg'
     }
 
     stages {
@@ -17,15 +17,6 @@ pipeline {
             }
         }
 
-        stage('Modify deployment.yaml') {
-            steps {
-                script {
-                    // Update image tag in deployment.yaml
-                    sh 'sed -i "s|image: .*|image: ${DOCKER_IMAGE}:latest|" development-deploy/deployment.yaml'
-                }
-            }
-        }
-
         stage('Git add and commit') {
             steps {
                 script {
@@ -34,6 +25,15 @@ pipeline {
 
                     // Commit the changes
                     sh 'git commit -m "Update image tag"'
+                }
+            }
+        }
+
+        stage('Modify deployment.yaml') {
+            steps {
+                script {
+                    // Update image tag in deployment.yaml
+                    sh 'sed -i "s|image: .*|image: ${DOCKER_IMAGE}:latest|" development-deploy/deployment.yaml'
                 }
             }
         }
