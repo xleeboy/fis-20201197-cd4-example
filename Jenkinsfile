@@ -13,15 +13,6 @@ node {
          }
      }
      
-     stage('Modify deployment.yaml') {
-        steps {
-            script {
-                // yq를 사용하여 deployment.yaml 파일에서 이미지 필드 업데이트
-                sh 'yq eval \'(.spec.template.spec.containers[0].image) = "ip-10-101-3-226.ap-northeast-2.compute.internal/fis-20201197-cd4-project/nginx:new-tag"\' -i development-deploy/deployment.yaml'
-            }
-        }
-    }
-
     stage('Git add and commit') {
         steps {
             script {
