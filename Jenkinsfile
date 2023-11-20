@@ -4,7 +4,7 @@ pipeline {
     environment {
         DOCKER_IMAGE = "ip-10-101-3-226.ap-northeast-2.compute.internal/fis-20201197-cd4-project/nginx"
         GITHUB_REPO_URL = "https://github.com/xleeboy/fis-20201197-cd4-project-apps.git"
-        GITHUB_CREDENTIALS_ID = 'github-reg'
+        GITHUB_CREDENTIALS_ID = github-reg
     }
 
     stages {
